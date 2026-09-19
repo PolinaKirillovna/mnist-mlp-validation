@@ -1,0 +1,38 @@
+# Fast smoke configuration: tiny grid, few epochs, small subsample.
+# Used by `make smoke` to check the whole pipeline runs end to end.
+seed: 42
+device: auto
+
+paths:
+  raw_dir: data/raw
+  train_file: d3.csv
+  test_file: mnist_test.csv
+
+split:
+  val_fraction: 0.1
+  stratified: true
+
+model:
+  hidden_sizes: [64, 32]
+  activation: relu
+  dropout_p: 0.0
+
+training:
+  epochs: 2
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 2
+  num_workers: 0
+
+grid:
+  datasets: [balanced]
+  dropouts: [0.0]
+  activations: [relu]
+  stability_repeats: 1
+
+interpretation:
+  occlusion_kernels: [2]
+  occlusion_stride: 2
+  occlusion_fill: 0.0
+  num_per_class_examples: 1

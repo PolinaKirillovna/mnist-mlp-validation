@@ -1,0 +1,26 @@
+name: ai-validation
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - numpy>=1.26
+      - pandas>=2.2
+      - pyarrow>=15.0
+      - matplotlib>=3.8
+      - seaborn>=0.13
+      - scikit-learn>=1.4
+      - umap-learn>=0.5.5
+      - torch>=2.2
+      - jax>=0.4.25
+      - jaxlib>=0.4.25
+      - flax>=0.8
+      - optax>=0.2
+      - pyyaml>=6.0
+      - tqdm>=4.66
+      - ruff>=0.5
+      - mypy>=1.10
+      - pytest>=8.0
+      - jupyter>=1.0
+      - nbconvert>=7.0

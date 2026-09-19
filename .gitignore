@@ -1,0 +1,45 @@
+# Assistant / working files (privacy: never commit these)
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+AGENTS.md
+PLAN.md
+
+# Data (large raw variant files and generated artifacts stay out of git)
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/.gitkeep
+data/anomalies/*
+!data/anomalies/.gitkeep
+
+# Experiment artifacts (checkpoints, large metrics); small json summaries are force-added explicitly
+artifacts/*
+!artifacts/.gitkeep
+
+# Reports build output
+reports/report.docx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

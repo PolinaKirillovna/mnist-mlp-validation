@@ -1,0 +1,38 @@
+# Grid configuration for LR1 Part 2 / Part 4.
+# Inherits the same base fields; the grid section defines the experiment sweep.
+seed: 42
+device: auto
+
+paths:
+  raw_dir: data/raw
+  train_file: d3.csv
+  test_file: mnist_test.csv
+
+split:
+  val_fraction: 0.1
+  stratified: true
+
+model:
+  hidden_sizes: [256, 128]
+  activation: relu
+  dropout_p: 0.0
+
+training:
+  epochs: 30
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 5
+  num_workers: 0
+
+grid:
+  datasets: [original, balanced, cleaned]
+  dropouts: [0.0, 0.2, 0.5]
+  activations: [relu, tanh, gelu]
+  stability_repeats: 3
+
+interpretation:
+  occlusion_kernels: [1, 2, 3]
+  occlusion_stride: 1
+  occlusion_fill: 0.0
+  num_per_class_examples: 1

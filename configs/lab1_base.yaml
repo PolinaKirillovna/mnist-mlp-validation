@@ -1,0 +1,49 @@
+# Base configuration for LR1 (single-run defaults used by validate / interpret).
+seed: 42
+device: auto
+
+paths:
+  raw_dir: data/raw
+  train_file: d3.csv
+  test_file: mnist_test.csv
+
+quality:
+  empty_active_fraction: 0.02
+  filled_active_fraction: 0.95
+  active_pixel_threshold: 0
+  intensity_z_threshold: 3.0
+  iqr_multiplier: 1.5
+  centroid_z_threshold: 3.0
+  knn_neighbors: 20
+  knn_quantile: 0.995
+  isolation_contamination: 0.01
+
+split:
+  val_fraction: 0.1
+  stratified: true
+
+dim_reduction:
+  subsample_size: 10000
+  pca_components: 50
+  tsne_perplexity: 30.0
+  umap_neighbors: 15
+  umap_min_dist: 0.1
+
+model:
+  hidden_sizes: [256, 128]
+  activation: relu
+  dropout_p: 0.0
+
+training:
+  epochs: 30
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 5
+  num_workers: 0
+
+interpretation:
+  occlusion_kernels: [1, 2, 3]
+  occlusion_stride: 1
+  occlusion_fill: 0.0
+  num_per_class_examples: 1
