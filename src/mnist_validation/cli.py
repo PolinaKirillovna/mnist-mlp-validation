@@ -68,22 +68,34 @@ def cmd_validate(config: Config) -> int:
 
 def cmd_grid(config: Config) -> int:
     """Part 2: full PyTorch training grid."""
-    return _not_implemented("stage 2 (training grid)")
+    from mnist_validation.pipeline import run_grid_pipeline
+
+    run_grid_pipeline(config)
+    return 0
 
 
 def cmd_interpret(config: Config) -> int:
     """Part 3: error analysis, occlusion and first-layer maps."""
-    return _not_implemented("stage 3 (interpretation)")
+    from mnist_validation.pipeline import run_interpretation
+
+    run_interpretation(config)
+    return 0
 
 
 def cmd_jax_compare(config: Config) -> int:
     """Part 4: JAX runs and PyTorch/JAX comparison."""
-    return _not_implemented("stage 4 (JAX comparison)")
+    from mnist_validation.pipeline import run_jax_comparison
+
+    run_jax_comparison(config)
+    return 0
 
 
 def cmd_smoke(config: Config) -> int:
     """Fast end-to-end sanity run on a subsample."""
-    return _not_implemented("stage 2 (training grid)")
+    from mnist_validation.pipeline import run_grid_pipeline
+
+    run_grid_pipeline(config)
+    return 0
 
 
 _COMMANDS = {

@@ -1,0 +1,28 @@
+{
+  "n_runs": 27,
+  "total_train_seconds": 1139.6,
+  "num_parameters": 235146,
+  "best_by_dataset": {
+    "original": {
+      "activation": "tanh",
+      "dropout": 0.0,
+      "val_macro_f1": 0.9831,
+      "test_accuracy": 0.979,
+      "test_macro_f1": 0.9788
+    },
+    "balanced": {
+      "activation": "gelu",
+      "dropout": 0.5,
+      "val_macro_f1": 0.9714,
+      "test_accuracy": 0.9747,
+      "test_macro_f1": 0.9745
+    },
+    "cleaned": {
+      "activation": "gelu",
+      "dropout": 0.5,
+      "val_macro_f1": 0.9693,
+      "test_accuracy": 0.9709,
+      "test_macro_f1": 0.9707
+    }
+  }
+}
