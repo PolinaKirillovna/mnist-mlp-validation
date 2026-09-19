@@ -1,0 +1,16 @@
+dataset,true_class,predicted_class,count
+original,9,4,19
+original,9,7,12
+original,3,5,7
+original,7,1,7
+original,7,2,7
+balanced,9,4,20
+balanced,7,2,10
+balanced,7,1,9
+balanced,8,5,9
+balanced,3,2,8
+cleaned,9,4,18
+cleaned,5,3,17
+cleaned,4,9,11
+cleaned,9,3,11
+cleaned,2,8,10

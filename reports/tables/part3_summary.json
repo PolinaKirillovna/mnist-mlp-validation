@@ -1,0 +1,38 @@
+{
+  "n_disagreement": 318,
+  "disagreement_fraction": 0.0318,
+  "n_anomalies_evaluated": 1409,
+  "anomaly_mean_agreement": 2.7416607523066006,
+  "confused_pairs": [
+    {
+      "dataset": "original",
+      "true_class": 9,
+      "predicted_class": 4,
+      "count": 19
+    },
+    {
+      "dataset": "original",
+      "true_class": 9,
+      "predicted_class": 7,
+      "count": 12
+    },
+    {
+      "dataset": "original",
+      "true_class": 3,
+      "predicted_class": 5,
+      "count": 7
+    },
+    {
+      "dataset": "original",
+      "true_class": 7,
+      "predicted_class": 1,
+      "count": 7
+    },
+    {
+      "dataset": "original",
+      "true_class": 7,
+      "predicted_class": 2,
+      "count": 7
+    }
+  ]
+}
