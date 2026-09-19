@@ -120,6 +120,46 @@ def load_bundle(path: str | Path, name: str) -> DatasetBundle:
     return DatasetBundle(images=images, labels=labels, row_ids=row_ids, name=name)
 
 
+def save_bundle(bundle: DatasetBundle, path: str | Path) -> Path:
+    """Persist a bundle to a compressed ``.npz`` file.
+
+    Args:
+        bundle: Bundle to save.
+        path: Output ``.npz`` path.
+
+    Returns:
+        The path written.
+    """
+    out = Path(path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(
+        out,
+        images=bundle.images,
+        labels=bundle.labels,
+        row_ids=bundle.row_ids,
+        name=np.array(bundle.name),
+    )
+    return out
+
+
+def load_bundle_npz(path: str | Path) -> DatasetBundle:
+    """Load a bundle previously saved with :func:`save_bundle`.
+
+    Args:
+        path: Path to the ``.npz`` file.
+
+    Returns:
+        The reconstructed :class:`DatasetBundle`.
+    """
+    data = np.load(path, allow_pickle=False)
+    return DatasetBundle(
+        images=data["images"].astype(np.uint8),
+        labels=data["labels"].astype(np.int64),
+        row_ids=data["row_ids"].astype(np.int64),
+        name=str(data["name"]),
+    )
+
+
 def validate_frame(frame: pd.DataFrame, name: str) -> None:
     """Validate the raw dataframe format and fail with a clear message otherwise.
 

@@ -1,0 +1,11 @@
+reason,description,count
+full_duplicate,Exact duplicate row (identical label and pixels),3866
+same_label_duplicate,Duplicate image within the same class,3866
+label_conflict,Identical image assigned conflicting labels,0
+out_of_range,"Pixel value outside [0, 255]",0
+near_empty,Near-empty image (too few active pixels),0
+near_full,Near-completely-filled image (too many active pixels),0
+intensity_outlier,Outlier intensity/fill statistic within its class,462
+centroid_outlier,Far from class centroid in pixel space,461
+knn_outlier,kNN-distance outlier in PCA space,300
+isolation_forest_outlier,Isolation Forest outlier in PCA space,600

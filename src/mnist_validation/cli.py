@@ -60,7 +60,10 @@ def _not_implemented(stage: str) -> int:
 
 def cmd_validate(config: Config) -> int:
     """Part 1: data validation, anomalies, figures and tables."""
-    return _not_implemented("stage 1 (data validation)")
+    from mnist_validation.pipeline import run_validation
+
+    run_validation(config)
+    return 0
 
 
 def cmd_grid(config: Config) -> int:
