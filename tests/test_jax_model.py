@@ -39,9 +39,7 @@ def test_jax_and_torch_same_parameter_count() -> None:
     torch_params = count_parameters(MLP(hidden_sizes=hidden))
     jax_clf = _jax_classifier(hidden)
     jax_params = sum(
-        np.asarray(v).size
-        for layer in jax_clf.params.values()
-        for v in layer.values()
+        np.asarray(v).size for layer in jax_clf.params.values() for v in layer.values()
     )
     assert torch_params == jax_params
 

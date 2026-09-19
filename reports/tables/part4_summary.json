@@ -1,0 +1,101 @@
+{
+  "stability_repeats": 3,
+  "comparison": [
+    {
+      "dataset": "original",
+      "framework": "PyTorch",
+      "activation": "tanh",
+      "dropout": 0.0,
+      "test_accuracy": 0.979,
+      "test_macro_f1": 0.9788460021531646,
+      "macro_f1_mean": 0.9772619513937949,
+      "macro_f1_std": 0.0011251095252445653,
+      "train_seconds_mean": 66.20166959100364
+    },
+    {
+      "dataset": "original",
+      "framework": "JAX",
+      "activation": "tanh",
+      "dropout": 0.0,
+      "test_accuracy": 0.9822,
+      "test_macro_f1": 0.9820589482137464,
+      "macro_f1_mean": 0.9809868174211118,
+      "macro_f1_std": 0.0008633526015601335,
+      "train_seconds_mean": 87.38875866099261
+    },
+    {
+      "dataset": "balanced",
+      "framework": "PyTorch",
+      "activation": "gelu",
+      "dropout": 0.5,
+      "test_accuracy": 0.9747,
+      "test_macro_f1": 0.9745327582172824,
+      "macro_f1_mean": 0.9734037846468625,
+      "macro_f1_std": 0.0009829418120542023,
+      "train_seconds_mean": 33.908962977332216
+    },
+    {
+      "dataset": "balanced",
+      "framework": "JAX",
+      "activation": "gelu",
+      "dropout": 0.5,
+      "test_accuracy": 0.9755,
+      "test_macro_f1": 0.9753866846776212,
+      "macro_f1_mean": 0.973883942170124,
+      "macro_f1_std": 0.0010658931580767024,
+      "train_seconds_mean": 28.140204063665198
+    },
+    {
+      "dataset": "cleaned",
+      "framework": "PyTorch",
+      "activation": "gelu",
+      "dropout": 0.5,
+      "test_accuracy": 0.9709,
+      "test_macro_f1": 0.9706502432213314,
+      "macro_f1_mean": 0.9703083446273065,
+      "macro_f1_std": 0.0009053531347866109,
+      "train_seconds_mean": 29.98260158932923
+    },
+    {
+      "dataset": "cleaned",
+      "framework": "JAX",
+      "activation": "gelu",
+      "dropout": 0.5,
+      "test_accuracy": 0.9694,
+      "test_macro_f1": 0.9691880290839068,
+      "macro_f1_mean": 0.9711291074423624,
+      "macro_f1_std": 0.0014618285992458286,
+      "train_seconds_mean": 24.033062912669266
+    }
+  ],
+  "error_overlap": [
+    {
+      "dataset": "original",
+      "torch_errors": 210,
+      "jax_errors": 178,
+      "shared_errors": 135,
+      "error_jaccard": 0.5335968379446641,
+      "prediction_agreement": 0.9861
+    },
+    {
+      "dataset": "balanced",
+      "torch_errors": 253,
+      "jax_errors": 245,
+      "shared_errors": 183,
+      "error_jaccard": 0.580952380952381,
+      "prediction_agreement": 0.9852
+    },
+    {
+      "dataset": "cleaned",
+      "torch_errors": 291,
+      "jax_errors": 306,
+      "shared_errors": 228,
+      "error_jaccard": 0.6178861788617886,
+      "prediction_agreement": 0.9836
+    }
+  ],
+  "map_correlation": {
+    "mean_corr_saliency_torch_jax": 0.7485330397113076,
+    "mean_corr_occlusion_vs_saliency": 0.08484892641226431
+  }
+}

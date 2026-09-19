@@ -1,0 +1,4 @@
+dataset,torch_errors,jax_errors,shared_errors,error_jaccard,prediction_agreement
+original,210,178,135,0.5335968379446641,0.9861
+balanced,253,245,183,0.580952380952381,0.9852
+cleaned,291,306,228,0.6178861788617886,0.9836
