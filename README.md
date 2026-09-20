@@ -8,7 +8,7 @@ interpretation (occlusion, first-layer weight maps, gradient-based saliency) on 
 MNIST subset. The project follows a clean, layered `src`-layout package.
 
 > Educational project for the ITMO course *AI Systems Validation* (laboratory
-> practicum, 2024). Report and notebook are in Russian; code and docs are in English.
+> practicum). Report and notebook are in Russian; code and docs are in English.
 
 ## What is done
 
